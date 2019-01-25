@@ -27,7 +27,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="home.html"><%= image_tag "logo.png"%></a>
+          <%= link_to image_tag("logo.png"), pages_path, {:class => 'navbar-brand logo_h'} %>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -37,12 +37,12 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-center">
-							<li class="nav-item <%= "active" if @current_page == 'home' %>"><a class="nav-link" href="home.html">Home</a></li>
-							<li class="nav-item <%= "active" if @current_page == 'features' %>"><a class="nav-link" href="features.html">Features</a></li>
-							<li class="nav-item <%= "active" if @current_page == 'price' %>"><a class="nav-link" href="price.html">Pricing</a></li>
-							<li class="nav-item <%= "active" if @current_page == 'elements' %>"><a class="nav-link" href="elements.html">Elements</a></li>
-							<li class="nav-item <%= "active" if @current_page == 'blog' %>"><a class="nav-link" href="blog.html">Blog</a></li>
-							<li class="nav-item <%= "active" if @current_page == 'contact' %>"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item <%= "active" if @current_page == 'home' %>"><%= link_to "Home", pages_path, {:class => 'nav-link'} %></li>
+							<li class="nav-item <%= "active" if @current_page == 'features' %>"><%= link_to "Features", pages_features_path, {:class => 'nav-link'} %></li>
+							<li class="nav-item <%= "active" if @current_page == 'price' %>"><%= link_to "Pricing", pages_price_path, {:class => 'nav-link'} %></li>
+							<li class="nav-item <%= "active" if @current_page == 'elements' %>"><%= link_to "Elements", pages_elements_path, {:class => 'nav-link'} %></li>
+							<li class="nav-item <%= "active" if @current_page == 'blog' %>"><%= link_to "Blog", pages_blog_path, {:class => 'nav-link'} %></li>
+							<li class="nav-item <%= "active" if @current_page == 'contact' %>"><%= link_to "Contact", pages_contact_path, {:class => 'nav-link'} %></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<a href="#" class="primary_btn text-uppercase">free trial</a></li>
