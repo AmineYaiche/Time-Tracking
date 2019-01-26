@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190125204326) do
+ActiveRecord::Schema.define(version: 20190126112009) do
 
   create_table "time_tracks", force: :cascade do |t|
-    t.integer "time"
+    t.float "time"
     t.integer "user_id"
     t.string "page"
     t.datetime "created_at", null: false
