@@ -108,6 +108,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!--================End Footer Area =================-->
+	<%# Time tracking javascript snippet %>
+	<%= javascript_include_tag 'pages/time-tracking.js' %>
+	<%= javascript_tag "startTracking('amine', '#{@current_page}')" %>
+	<%# Time tracking javascript snippet %>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

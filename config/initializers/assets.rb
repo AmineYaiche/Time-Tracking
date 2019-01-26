@@ -16,6 +16,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( pages/*.css )
 
+Rails.application.config.assets.precompile += %w( pages/time-tracking.js )
+
 Rails.application.config.assets.precompile += %w( pages/index.js )
 Rails.application.config.assets.precompile += %w( pages/stellar.js )
 Rails.application.config.assets.precompile += %w( pages/jquery.magnific-popup.min.js )
