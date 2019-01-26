@@ -22,4 +22,10 @@ class User < ApplicationRecord
   def admin?
     return self.user_type == 'admin'
   end
+
+  def authenticated?(token)
+    digest = send("remember_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token)
+  end
 end

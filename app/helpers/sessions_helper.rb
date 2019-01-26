@@ -26,10 +26,30 @@ module SessionsHelper
   def log_out
     forget(current_user)
     session.delete(:user_id)
-    @current_user = nil
   end
 
-  def logged_in?
-    !current_user.nil?
+  def require_login
+		if current_user.nil?
+			redirect_to login_path
+		end
+  end
+  
+  def require_admin
+    if (user = current_user) && user.admin?
+      return true
+    else
+      redirect_to root_path
+    end
+  end
+
+  def current_user
+    if (user_id = user_id = session[:user_id])
+      return User.find_by(id: user_id)
+    elsif (user_id = cookies.signed[:user_id])
+      user = User.find_by(id: user_id)
+      if user && user.authenticated?(cookies[:remember_token])
+        log_in user
+      end
+    end
   end
 end
