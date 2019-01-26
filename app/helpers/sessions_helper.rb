@@ -30,7 +30,7 @@ module SessionsHelper
   end
 
   def current_user
-    if (user_id = user_id = session[:user_id])
+    if (user_id = session[:user_id])
       return User.find_by(id: user_id)
     end
   end

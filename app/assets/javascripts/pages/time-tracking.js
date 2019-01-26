@@ -4,7 +4,7 @@
 //= require_self
 //= require_tree ../channels
 
-function startTracking(username, page) {
+function startTracking(page) {
 
   (function () {
     this.App || (this.App = {});
@@ -15,15 +15,14 @@ function startTracking(username, page) {
       channel: "SyncChannel"
     })
 
-    new Tracker(syncChannel, username, page);
+    new Tracker(syncChannel, page);
   }).call(this);
 }
 
 class Tracker {
-  constructor(channel, username, page) {
+  constructor(channel, page) {
     this.startWatching = moment()
     this.channel = channel
-    this.username = username
     this.page = page
 
     window.onblur = () => {
@@ -43,7 +42,6 @@ class Tracker {
     const trackedTime = moment().diff(this.startWatching) / 1000
     this.startWatching = null
     this.channel.send({
-      sent_by: this.username,
       body: {
         time: trackedTime,
         page: this.page
