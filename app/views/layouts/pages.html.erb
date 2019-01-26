@@ -45,7 +45,10 @@
 							<li class="nav-item <%= "active" if @current_page == 'contact' %>"><%= link_to "Contact", pages_contact_path, {:class => 'nav-link'} %></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<a href="#" class="primary_btn text-uppercase">free trial</a></li>
+							<button type="button" class="btn btn-default btn-sm" style="background-color: #8252fa">
+								<%= link_to "Log out", logout_url, {:style => 'color: white'} %>
+								<span class="oi" data-glyph="account-logout"></span>
+        			</button>
 						</ul>
 					</div>
 				</div>

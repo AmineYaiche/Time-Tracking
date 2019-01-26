@@ -10,22 +10,7 @@ class User < ApplicationRecord
     BCrypt::Password.create(string, cost: cost)
   end
 
-  def remember
-    self.remember_token = User.new_token
-    update_attribute(:remember_digest, User.digest(remember_token))
-  end
-
-  def forget
-    update_attribute(:remember_digest, nil)
-  end
-
   def admin?
     return self.user_type == 'admin'
-  end
-
-  def authenticated?(token)
-    digest = send("remember_digest")
-    return false if digest.nil?
-    BCrypt::Password.new(digest).is_password?(token)
   end
 end
