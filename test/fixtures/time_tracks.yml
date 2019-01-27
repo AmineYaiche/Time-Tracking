@@ -1,11 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  time: 1
-  user: one
-  page: MyString
-
-two:
-  time: 1
-  user: two
-  page: MyString
+amine_blog_track:
+  time: 10
+  user: amine
+  page: blog
