@@ -111,6 +111,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!--================End Footer Area =================-->
+	
 	<%# Time tracking javascript snippet %>
 	<%= javascript_include_tag 'pages/time-tracking.js' %>
 	<%= javascript_tag "startTracking('#{@current_page}')" %>
@@ -118,15 +119,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <%= javascript_include_tag 'pages/bootstrap.min.js' %>
-    <%= javascript_include_tag 'pages/jquery-3.2.1.min.js' %>
-    <%= javascript_include_tag 'pages/popper.js' %>
-    <%= javascript_include_tag 'pages/stellar.js' %>
-    <%= javascript_include_tag 'pages/stellar.js' %>
-    <%= javascript_include_tag 'pages/jquery.magnific-popup.min.js' %>
-    <%= javascript_include_tag 'pages/jquery.ajaxchimp.min.js' %>
-    <%= javascript_include_tag 'pages/mail-script.js' %>
-    <%= javascript_include_tag 'pages/theme.js' %>
+    <%= javascript_include_tag 'pages/vendors/bootstrap.min.js' %>
+    <%= javascript_include_tag 'pages/vendors/jquery-3.2.1.min.js' %>
+    <%= javascript_include_tag 'pages/vendors/popper.js' %>
+    <%= javascript_include_tag 'pages/vendors/stellar.js' %>
+    <%= javascript_include_tag 'pages/vendors/stellar.js' %>
+    <%= javascript_include_tag 'pages/vendors/jquery.magnific-popup.min.js' %>
+    <%= javascript_include_tag 'pages/vendors/jquery.ajaxchimp.min.js' %>
+    <%= javascript_include_tag 'pages/vendors/mail-script.js' %>
+    <%= javascript_include_tag 'pages/vendors/theme.js' %>
     <%= javascript_include_tag 'pages/vendors/nice-select/js/jquery.nice-select.min.js' %>
     <%= javascript_include_tag 'pages/vendors/isotope/imagesloaded.pkgd.min.js' %>
     <%= javascript_include_tag 'pages/vendors/isotope/isotope-min.js' %>

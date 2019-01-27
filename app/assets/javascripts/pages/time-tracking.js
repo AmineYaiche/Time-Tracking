@@ -4,6 +4,8 @@
 //= require_self
 //= require_tree ../channels
 
+// This function initiate a websocket connection with the server
+// And start the tracking of a given page.
 function startTracking(page) {
 
   (function () {
@@ -19,6 +21,8 @@ function startTracking(page) {
   }).call(this);
 }
 
+// This class contains a set of methods and events used to track the user spent time.
+// This class require the page name and the websocket channel object.
 class Tracker {
   constructor(channel, page) {
     this.startWatching = moment()

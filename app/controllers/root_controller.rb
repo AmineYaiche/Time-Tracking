@@ -1,4 +1,5 @@
 class RootController < ApplicationController
+
   def index
     if (user = current_user)
       if user.admin?

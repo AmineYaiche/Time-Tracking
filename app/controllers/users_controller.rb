@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :require_admin, except: [:new, :create]
 
+  # Only for admin, this view display the list of the regular users
   def index
     @users = User.where(user_type: 'regular').paginate(page: params[:page])
   end
@@ -9,6 +10,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # Create a new regular user. Used in the signup view
   def create
     @user = User.new(user_params)
     @user.user_type = 'regular'
