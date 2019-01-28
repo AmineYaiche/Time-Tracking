@@ -8,7 +8,7 @@
 
 - In the first step, we need to create and apply migrations to the database, using the following command:
 
-`docker-compose run --rm web rails db:create db:migrate`. 
+`docker-compose run --rm web rails db:create db:migrate`
 
 - Then, we need to precompile the assets:
 
